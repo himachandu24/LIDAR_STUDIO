@@ -1,20 +1,14 @@
 import sys
 
-from PySide6.QtWidgets import QApplication, QMainWindow
+from PySide6.QtWidgets import QApplication
 
-
-class LidarStudio(QMainWindow):
-    def __init__(self):
-        super().__init__()
-
-        self.setWindowTitle("LIDAR Studio")
-        self.resize(1200, 700)
+from app.ui.main_window import MainWindow
 
 
 def main():
     app = QApplication(sys.argv)
 
-    window = LidarStudio()
+    window = MainWindow()
     window.show()
 
     sys.exit(app.exec())
